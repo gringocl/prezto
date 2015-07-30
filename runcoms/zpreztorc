@@ -1,3 +1,4 @@
+
 #
 # Sets Prezto options.
 #
@@ -10,7 +11,7 @@
 #
 
 # Set case-sensitivity for completion, history lookup, etc.
-# zstyle ':prezto:*:*' case-sensitive 'yes'
+zstyle ':prezto:*:*' case-sensitive 'no'
 
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
@@ -27,12 +28,20 @@ zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
   'editor' \
+  'fasd' \
   'history' \
   'directory' \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'git' \
+  'ruby' \
+  'prompt'\
+  'osx'\
+  'syntax-highlighting'\
+  'history-substring-search'\
+  'ssh'\
+  'archive'
 
 #
 # Editor
@@ -85,7 +94,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'skwp'
 
 #
 # Ruby
@@ -152,3 +161,4 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+# [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh

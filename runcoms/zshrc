@@ -5,6 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -12,3 +13,9 @@ fi
 
 # Customize to your needs...
 
+for config_file ($HOME/.zsh/*.zsh) source $config_file
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+function ole() { "$( git rev-parse --show-toplevel )/bin/open_last_error" "$@" }
